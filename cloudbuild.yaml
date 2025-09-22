@@ -1,0 +1,17 @@
+# steps:
+# - name: golang
+#   args: ["go","build", "-o","go-app","." ]
+
+# artifacts:
+#   objects:
+#     location: gs://go-app-artifacts/
+#     paths: ["./go-app"]
+
+steps:
+- name: golang
+  args: [ "go", "build", "-o", "go-app", "." ]
+
+artifacts:
+  objects:
+    location: gs://go-artifacts-03/
+    paths: [ "./go-app" ]
